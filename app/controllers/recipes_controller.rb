@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
 
 	def show
-		@recipes = Recipe.find(params[:id])
+		# @recipe = Recipe.all
+
+@countries = Country.find(params[:id])
 	end
 end

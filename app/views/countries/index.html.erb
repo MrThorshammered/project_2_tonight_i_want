@@ -1,6 +1,5 @@
 <% @countries.each do |country| %>
 
-<h1><%= country.name %><%= image_tag country.image %>
-</h1>
+<h1><%= link_to country.name, recipe_path(country.id)%><%= image_tag country.image %></h1>
 
-<% end %>
+<%end%>
