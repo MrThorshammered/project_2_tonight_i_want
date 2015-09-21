@@ -26,13 +26,17 @@ class RecipesController < ApplicationController
 	end
 
 	def edit
+		@recipe = Recipe.find(params[:id])
 	end
 
 	def update
+		@recipe = Recipe.find(params[:id])
+      if @recipe.update(recipe_params)
+      	redirect_to recipe_path(recipe_params[:country_id])
+      end
 	end
 
 	def destroy
-		# country = Country.find(params[:country_id])
 		@recipe = Recipe.find(params[:id]).destroy
 		redirect_to :back
 	end
