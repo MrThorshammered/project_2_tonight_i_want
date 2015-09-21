@@ -1,12 +1,10 @@
-
-
-
-
 <% @countries.recipes.each do |country| %>
-
 <h1><%= country.name %></h1>
+<%= image_tag country.recipe_image %>
+<h2><%= country.method %></h2>
 
 <%end%>
 
+<%= link_to 'new recipe', new_recipe_path %>
 
 

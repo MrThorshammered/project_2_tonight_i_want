@@ -47,6 +47,11 @@ GEM
     byebug (5.0.0)
       columnize (= 0.9.0)
     callsite (0.0.11)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -59,6 +64,9 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
+    foundation-rails (5.5.2.1)
+      railties (>= 3.1.0)
+      sass (>= 3.3.0, < 3.5)
     git-version-bump (0.15.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -177,7 +185,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
+  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   meta_request
