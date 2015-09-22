@@ -1,8 +1,8 @@
 <% @countries.each do |country| %>
-
-<h1 id='country-name'><%= link_to image_tag(country.country_image) + country.name, recipe_path(country.id), class: 'button', id: 'country-icon' %></h1>
+<div id="country-box" class="small-4 columns">
+<%= link_to image_tag(country.country_image) + country.name, recipe_path(country.id), class: 'button', id: 'country-icon' %>
 <%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
+</div>
 
 <%end%>
-
 <footer><%= link_to 'new country', new_country_path, class: 'button' %></footer>
