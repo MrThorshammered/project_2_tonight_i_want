@@ -1,5 +1,8 @@
 <% @countries.each do |country| %>
 
-<h1><%= link_to country.name, recipe_path(country.id)%><%= image_tag country.image %></h1>
+<h1><%= link_to country.name, recipe_path(country.id)%><%= image_tag country.country_image %></h1>
+<%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 <%end%>
+
+<footer><%= link_to 'new country', new_country_path %></footer>
