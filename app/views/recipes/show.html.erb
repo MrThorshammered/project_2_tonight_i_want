@@ -1,15 +1,17 @@
 <% @country.recipes.each do |recipe| %>
-<h1><%= recipe.name %></h1>
+<a data-dropdown="drop<%= recipe.id %>" aria-controls="drop2" aria-expanded="true"><h1><%= recipe.name %></h1></a><br>
+
+<div id="drop<%= recipe.id %>" data-dropdown-content class="f-dropdown content" aria-hidden="true" tabindex="-1">
 <%= image_tag recipe.recipe_image %>
-<h2><%= recipe.method %></h2>
-<h3><%= recipe.id %> </h3>
+<p><h4>Ingredients</h4><%= recipe.amounts %></p>
+<p><h4>Recipe</h4><%= recipe.method %></p>
+</div>
 
-<%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %>
 
-<%= link_to 'Edit', edit_recipe_path(recipe) %>
+<%= link_to 'Edit', edit_recipe_path(recipe), class: 'button' %>
 <%end%>
 
 
-<footer><%= link_to 'new recipe', new_recipe_path %></footer>
-
+<footer><%= link_to 'new recipe', new_recipe_path, class: 'button' %></footer>
 
